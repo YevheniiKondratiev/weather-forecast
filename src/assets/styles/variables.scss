@@ -1,0 +1,36 @@
+$white:      #FFFFFF;
+$dark-white: #d8e0dd;
+$gray:       rgba(255,255,255,.3);
+$light-gray: #8c8c8c;
+$dark-gray:  rgba(0, 0, 0, .12);
+$black:      #000000;
+$red:        #f13a3c;
+$green-gray: #689696;
+
+// overview-header
+$overview-header-color:             $white !default;
+$overview-header-place-bg-color:    rgba(0,0,0,.4) !default;
+$overview-header-place-placeholder: $dark-white !default;
+$overview-header-title-text-shadow: $black !default;
+
+//overview-search
+$overview-search-color:               $white !default;
+$overview-search-line-color:          $white !default;
+$overview-search-input-bg-color:      $gray !default;
+$overview-search-input-border:        $gray !default;
+$overview-search-placeholder-color:   rgba(255,255,255,.8) !default;
+
+//tab-group
+$tab-group-red-dot-bg-color:          $red !default;
+$tab-group-ink-bar-bg-color:          $green-gray !default;
+
+//today-card
+$today-card-box-shadow:               $dark-gray !default;
+$today-card-details-text-color:       $light-gray !default;
+
+//owl-carousel
+$owl-carousel-nav-btn-bg-color:       $white !default;
+$owl-carousel-nav-btn-bg-color-hover: $dark-white !default;
+$owl-carousel-nav-btn-box-shadow-clr: rgb(0 0 0 / 10%) !default;
+$owl-carousel-right-fader-bg:         linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, $gray 98.83%) !default;
+$owl-carousel-left-fader-bg:          linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, $gray 98.83%) !default;

@@ -1,0 +1,38 @@
+<ng-container [ngSwitch]="weatherName">
+    <img mat-card-image
+         *ngSwitchCase="'Sunny' || 'Clear'"
+         class="weather-img"
+         src="assets/sunny.png"
+         alt="Sunny"
+    >
+    <img mat-card-image
+         *ngSwitchCase="'Clouds'"
+         class="weather-img"
+         src="assets/cloud-computing.png"
+         alt="Sunny"
+    >
+    <img mat-card-image
+         *ngSwitchCase="'Snow'"
+         class="weather-img"
+         src="assets/snowy.png"
+         alt="Sunny"
+    >
+    <img mat-card-image
+         *ngSwitchCase="'Storm'"
+         class="weather-img"
+         src="assets/thunderstorm.png"
+         alt="Sunny"
+    >
+    <img mat-card-image
+         *ngSwitchCase="'Rain'"
+         class="weather-img"
+         src="assets/rainy-day.png"
+         alt="Sunny"
+    >
+    <img mat-card-image
+         *ngSwitchDefault
+         class="weather-img"
+         src="assets/sunny.png"
+         alt="Sunny"
+    >
+</ng-container>

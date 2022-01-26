@@ -1,0 +1,62 @@
+@import "../../../assets/styles/variables";
+
+.overview-header {
+  display: flex;
+  padding: 3em;
+  justify-content: space-between;
+  align-items: center;
+  color: $overview-header-color;
+
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 3px 3px 4px $overview-header-title-text-shadow;
+    font-weight: 300;
+    font-size: 2em;
+    padding-left: 1%;
+    margin-bottom: auto;
+  }
+
+  &__place {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    width: fit-content;
+    max-width: 50vh;
+    border-radius: 1em;
+    padding: 0.75em 1.5em;
+    white-space: nowrap;
+    background-color: $overview-header-place-bg-color;
+    box-sizing: content-box;
+    overflow: hidden;
+    margin-right: 2.5%;
+
+    &-icon {
+      margin-right: 0.5em;
+    }
+
+    &-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      line-height: 1.2em;
+      text-overflow: ellipsis;
+    }
+
+    &-placeholder {
+      color: $overview-header-place-placeholder;
+      font-weight: 300;
+      line-height: 1.25em;
+      font-size: 0.9em;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .overview-header {
+    flex-direction: column;
+    padding-bottom: 1em;
+
+    &__title {
+      margin-bottom: 0.5em;
+    }
+  }
+}

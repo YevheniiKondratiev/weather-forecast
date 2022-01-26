@@ -1,0 +1,11 @@
+@import "variables";
+
+@mixin nav-btn {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0.5em;
+  border-radius: 50%;
+  box-shadow: 0 0 1em $owl-carousel-nav-btn-box-shadow-clr;
+  background-color: $owl-carousel-nav-btn-bg-color;
+}

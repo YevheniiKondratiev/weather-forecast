@@ -1,0 +1,17 @@
+<mat-card class="today-card">
+    <mat-card-header class="today-card__left-side">
+        <div class="today-card__left-side__degree">{{todayDegree | degree}}</div>
+        <div class="today-card__left-side__weather">
+            <div class="today-card__left-side__weather-text">{{todayWeather$ | async}}</div>
+            <app-weather-image [weatherName]="todayWeather$ | async"></app-weather-image>
+        </div>
+        <div class="sm-text">{{todayDate | date: 'EEEE d, MMMM \'yy'}}</div>
+    </mat-card-header>
+    <mat-divider vertical class="today-card__divider"></mat-divider>
+    <mat-card-content class="today-card__right-side">
+        <div class="today-card__right-side__detail" *ngFor="let detail of detailsConfig">
+            {{detail.name}} &nbsp;
+            <div class="today-card__right-side__detail-value">{{detail.value}}</div>
+        </div>
+    </mat-card-content>
+</mat-card>

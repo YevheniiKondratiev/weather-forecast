@@ -1,0 +1,62 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/common";
+
+.today-card {
+  display: flex;
+  box-shadow: 0 0 1.5em rgb(0 0 0 / 10%);
+  border-radius: 1em;
+  max-width: 90%;
+  margin: 4.25% 0;
+  padding: 8%;
+
+  &__left-side {
+    min-width: 50%;
+    flex-direction: column;
+    margin: auto !important;
+    padding-right: 5%;
+
+    &__degree {
+      @extend .main-text;
+      letter-spacing: 0;
+    }
+
+    &__weather {
+      display: flex;
+      align-items: flex-end;
+
+      &-text {
+        @extend .secondary-text;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__divider {
+    border-right-width: 0.25em !important;
+    border-radius: 1em;
+  }
+
+  &__right-side {
+    min-width: 50%;
+    padding: 3% 5%;
+    margin: auto !important;
+
+    &__detail {
+      @extend .sm-text;
+      color: $today-card-details-text-color;
+      display: flex;
+      line-height: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .today-card__left-side__weather {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-text {
+      padding-bottom: 10%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100vh;
+
+  &__overview {
+    min-width: 60%;
+    background-image: url("../assets/01-banff-national-park-canada.webp");
+    border-radius: 3em;
+    background-size: cover;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-height: 100vh;
+    min-width: 40%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-height: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+}

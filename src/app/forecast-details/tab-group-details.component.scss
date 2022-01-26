@@ -1,0 +1,72 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/common";
+
+.tab-group {
+  padding-top: 6%;
+  max-height: 100%;
+
+  ::ng-deep {
+    .mat-tab-header {
+      border-bottom: none;
+      padding-left: 20%;
+    }
+
+    .mat-tab-labels {
+      justify-content: space-evenly;
+      margin-bottom: 1%;
+    }
+
+    .mat-tab-label {
+      min-width: fit-content !important;
+      opacity: 1;
+      height: 1.75em;
+      border-radius: 15%;
+    }
+
+    .mat-ink-bar {
+      background-color: $tab-group-ink-bar-bg-color;
+      width: 2.5em !important;
+      height: 15%;
+      margin-right: auto;
+      margin-left: 2.5em;
+      border-radius: 1em;
+    }
+  }
+
+  &__tab {
+    &-header {
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    &-content {
+      padding-top: 2%;
+      padding-left: 9%;
+
+      &-carousel {
+        position: relative;
+      }
+    }
+  }
+}
+
+.red-dot {
+  position: absolute;
+  top: 0.2em;
+  left: 75%;
+  height: 0.5em;
+  width: 0.5em;
+  background-color: $tab-group-red-dot-bg-color;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .tab-group {
+    ::ng-deep .mat-tab-header {
+      padding: 0 10%;
+    }
+  }
+}
+

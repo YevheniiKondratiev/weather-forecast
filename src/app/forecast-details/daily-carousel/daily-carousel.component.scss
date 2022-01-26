@@ -1,0 +1,102 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/common";
+
+.daily-carousel {
+  max-width: 90%;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0 1.5em rgb(0 0 0 / 10%);
+    border-radius: 1em;
+    max-width: 90%;
+    width: 12em !important;
+    margin: 1% 0;
+    padding: 10% 5% 1%;
+    box-sizing: content-box;
+    min-height: 10em;
+
+    &-degree {
+      @extend .secondary-text;
+      margin-bottom: 15%;
+    }
+
+    &-weather {
+      display: flex;
+      align-items: flex-end;
+
+      &-text {
+        @extend .secondary-text;
+        font-weight: 500;
+        font-size: 2em;
+      }
+    }
+  }
+
+  ::ng-deep {
+    .owl-carousel {
+      display: flex;
+      width: 90%;
+      transform: translateX(-3%);
+    }
+
+    .owl-stage-outer {
+      display: flex;
+      margin: auto;
+    }
+
+    .owl-stage {
+      display: flex;
+      padding: 2%;
+    }
+
+    .owl-item {
+      margin-right: 2.75%;
+      transition: opacity 500ms;
+    }
+
+    .owl-nav {
+      position: absolute;
+      top: 35%;
+      left: -0.5em;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .owl-prev {
+      @include nav-btn();
+      transform: rotate(180deg);
+    }
+
+    .owl-next {
+      @include nav-btn();
+    }
+
+    .owl-nav [class*=owl-]:hover {
+      background-color: $owl-carousel-nav-btn-bg-color-hover !important;
+    }
+  }
+}
+
+.left-fader,
+.right-fader {
+  position: absolute;
+  pointer-events: none;
+  height: 100%;
+  width: 15px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  background: $owl-carousel-right-fader-bg;
+  z-index: 3;
+}
+
+.left-fader {
+  left: 0;
+  right: auto;
+  background: $owl-carousel-left-fader-bg;
+}

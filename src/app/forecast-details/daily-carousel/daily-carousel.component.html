@@ -1,0 +1,20 @@
+<div class="left-fader" *ngIf="controlStates.isLeftFader"></div>
+<owl-carousel-o class="daily-carousel" [options]="dailyCarouselOptions">
+    <ng-container *ngFor="let item of forecastDailyItems | async;">
+        <ng-template carouselSlide [width]="178">
+            <mat-card class="daily-carousel__card">
+                <div class="daily-carousel__card-degree">
+                    {{item.degree | degree}}
+                </div>
+                <div class="daily-carousel__card-weather">
+                    <div class="daily-carousel__card-weather-text">{{item.weather}}</div>
+                    <app-weather-image [weatherName]="item.weather"></app-weather-image>
+                </div>
+                <div class="sm-text">
+                    {{item.date | date:'EEE d, MMM \'yy'}}
+                </div>
+            </mat-card>
+        </ng-template>
+    </ng-container>
+</owl-carousel-o>
+<div class="right-fader" *ngIf="controlStates.isRightFader"></div>

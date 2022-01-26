@@ -1,0 +1,110 @@
+@import "../../../assets/styles/variables";
+
+.overview-search {
+  display: flex;
+  color: $overview-search-color;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em;
+
+  &__placeholder {
+    font-weight: 400;
+    font-size: 2.1em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 6%;
+  }
+
+  &__line{
+    content: '';
+    background-color: $overview-search-line-color;
+    border-radius: 1em;
+    height: 0.5em;
+    width: 10em;
+    margin: 1em auto;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-field {
+      width: 75%;
+
+      ::ng-deep  {
+        .mat-form-field-underline {
+          display: none;
+        }
+
+        .mat-form-field-infix {
+          display: flex;
+        }
+
+        .mat-form-field-wrapper {
+          padding-bottom: 1em;
+        }
+      }
+
+      &-input {
+        width: 100%;
+        border-radius: 0.5em;
+        height: 3em;
+        background-color: $overview-search-input-bg-color;
+        padding: 0.5em 1em 0.5em 1.5em;
+        box-sizing: border-box;
+        backdrop-filter: blur(0.2em);
+        position: relative;
+      }
+
+      &-input:hover {
+        border: 0.15em solid rgba(255,255,255,.3);
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 22%;
+      right: 4%;
+    }
+  }
+}
+
+::placeholder {
+  color: $overview-search-placeholder-color;
+  font-size: 1.2em;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .overview-search {
+    padding: 0;
+
+    &__placeholder {
+      display: none;
+    }
+
+    &__line {
+      display: none;
+    }
+
+    &__form-field {
+      width: 80vw;
+    }
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .overview-search {
+    padding: 0;
+    width: 100%;
+
+    &__placeholder {
+      display: none;
+    }
+
+    &__line {
+      display: none;
+    }
+  }
+}

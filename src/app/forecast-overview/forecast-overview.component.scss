@@ -1,0 +1,27 @@
+.forecast-overview {
+  display: flex;
+  flex-direction: column;
+  background-color:rgba(0,0,0,.2);
+  height: 100%;
+  width:100%;
+  border-radius: 3em;
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    transform: translateY(-10vh);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .forecast-overview__search {
+    transform: none;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .forecast-overview__search {
+    margin: auto 10%;
+  }
+}

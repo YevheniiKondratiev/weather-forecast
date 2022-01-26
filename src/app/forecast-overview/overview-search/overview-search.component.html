@@ -1,0 +1,25 @@
+<div class="overview-search">
+    <div class="overview-search__placeholder">The Only Weather Forecast You Need</div>
+    <div class="overview-search__line"></div>
+    <form class="overview-search__form" (ngSubmit)="onSubmit($event)">
+        <mat-form-field class="overview-search__form-field" appearance="fill">
+            <input type="text"
+                   class="overview-search__form-field-input"
+                   placeholder="Enter location"
+                   matInput
+                   [formControl]="searchControl"
+                   [matAutocomplete]="auto">
+            <mat-icon class="search-icon">
+                search
+            </mat-icon>
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <button mat-icon-button type="button" (click)="onCurrentLocationClicked()">
+            <mat-icon>my_location</mat-icon>
+        </button>
+    </form>
+</div>
