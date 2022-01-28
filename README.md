@@ -19,6 +19,15 @@ user should have possibility:
 ### Additional requirements
  - cache implementation; - not yet done
  - usage of Angular material;
+
+#### Recourses
+WeatherForecast API:
+- https://openweathermap.org/api/one-call-api
+- https://openweathermap.org/current
+- https://openweathermap.org/forecast16
+
+IP Geolocation API:
+- http://ip-api.com/json
  
 Design:
 
